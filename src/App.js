@@ -1,19 +1,14 @@
 import React from 'react';
-
 import Contact from './components/Contact'
+import users from './components/contactList';
 
 function App() {
     return (
     <div className="App">
-      <Contact  avatar ='https://randomuser.me/api/portraits/men/79.jpg' 
-                myName = 'Poulet tandori'
-                online />
-      <Contact  avatar ='https://randomuser.me/api/portraits/women/67.jpg' 
-                myName = 'Poulet frit'
-                online 
-                />
-      <Contact  avatar ='https://randomuser.me/api/portraits/women/50.jpg' 
-                myName = 'Poulet rôti'/>
+      {users.map(user=>
+      <Contact  avatar = {user.avatar}
+                name = {user.name}
+                status = {user.online}/>)}
     </div>
   );
 }
