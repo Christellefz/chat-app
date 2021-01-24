@@ -8,7 +8,7 @@ function App() {
       {users.map(user=>
       <Contact  avatar = {user.avatar}
                 name = {user.name}
-                status = {user.online}/>)}
+                />)}
     </div>
   );
 }
